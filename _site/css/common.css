@@ -3,3 +3,17 @@ html{
     padding:0;
     font: normal 100%/1.4 Georgia,serif;
 }
+.current{
+    background-color:#000531;
+    color:#fff;
+}
+ul.nav {
+    list-style-type: none;
+    display: flex;
+}
+.nav-top {
+    font-size:23px;
+}
+.nav-bottom{
+    font-size:16px;
+}
