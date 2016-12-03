@@ -4,9 +4,9 @@ layout: news
 
 <h1>News</h1>
 <ul>
-    {% for news in site.categories.news limit:3 %}
+    {% for news in site.categories.other limit:10 %}
         <li>
-            <a href="">{{news.title}}</a>
+            <a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
             <p>{{news.meta}}</p>
         </li>
     {% endfor %}

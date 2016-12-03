@@ -1,7 +1,7 @@
 ---
-layout: news
+layout: news-article
 title: Xtra-PC - onko siitä mihinkää?
-meta: An excerpt for example
+meta: An excerpt  example
 source: hs.fi
 category: other
 ---
