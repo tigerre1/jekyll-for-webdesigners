@@ -7,5 +7,7 @@ tagline: A basic guide to Jekyll
 
 # Build settings
 markdown: kramdown
+kramdown:
+    auto_ids: false
 paginate: 4
 paginate_path: '/blog/page:num/'
