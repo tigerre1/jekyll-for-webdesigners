@@ -15,7 +15,7 @@ Although Jekyll is built to be “blog aware,” it’s important to point out t
 Jekyll is a Ruby-based parsing engine that uses YAML, the Liquid Templating language, and Markdown to assemble content into HTML. That might sound confusing at first, but it’s really pretty simple. YAML is used to store data, site variables, and what is known as “front matter,” which drives things like the layout used for a post or page. Liquid is used to build the templates that pages are built from, and Markdown can be used to format content for individual posts or pages. You can also use regular HTML to format content as well, but Markdown makes writing content much more natural. This post, for example, was written in Markdown.
 
 A simple Jekyll directory looks like this:
-
+~~~~
 ├── _config.yml 
 ├── _includes 
 |   ├── footer.html 
@@ -30,6 +30,7 @@ A simple Jekyll directory looks like this:
 |   ├── main.css  
 ├── _site  
 └── index.html
+~~~~
 
 The **_config.yml** file is a YAML file that contains the overall site configuration such as site title, author information, pagination, and permalinks. The **_includes** directory holds HTML snippets that can be injected on any desired page with a simple Liquid tag. The **_layouts** folder contains the HTML templates that are used to generate pages for the site, and the **_posts** directory contains the individual blog posts, written in either Markdown or HTML. Note the naming convention for the posts. This is used to date stamp the posts and can be used for site organization and permalinks. The css directory contains the CSS for the site, and in this case is not preceded by an underscore. Any directory without an underscore is not parsed, and is copied as-is when the site is generated. Jekyll also supports SASS, any .scss files with YAML front matter would be parsed and processed. The _site directory is where the generated site will be created. From there it can be uploaded to your server of choice. Finally the index.htm file contains the content and blogging logic for the home page of the blog, and typically uses one of the templates for overall page structure.
 
