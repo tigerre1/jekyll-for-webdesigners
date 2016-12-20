@@ -9,5 +9,5 @@ tagline: A basic guide to Jekyll
 markdown: kramdown
 kramdown:
     auto_ids: false
-paginate: 4
+paginate: 2
 paginate_path: '/blog/page:num/'

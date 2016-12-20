@@ -2,10 +2,11 @@
 layout: post
 title:  "Liquid Syntax Basics"
 date:   2015-06-07
+tags: [liquid, jekyll, templates]
 ---
-Jekyll uses the Liquid template language to control the logic of templates and assemble pages dynamically. To get the most out of Jekyll, and to build effective templates you need to understand the basics of how Liquid works. In this post we’ll cover the basics of Liquid syntax so that as you begin to author templates, you’ll have a greater understanding of Jekyll’s capabilities and how Liquid can help you build more powerful sites.
+Jekyll uses the [Liquid](http://liquidmarkup.org/ "liquid") template language to control the logic of templates and assemble pages dynamically. To get the most out of Jekyll, and to build effective templates you need to understand the basics of how Liquid works. In this post we’ll cover the basics of Liquid syntax so that as you begin to author templates, you’ll have a greater understanding of Jekyll’s capabilities and how Liquid can help you build more powerful sites.
 
-Liquid was created in 2006 as a Ruby template language for the ecommerce site Shopify. It remains an integral part of Shopify, but has been spun off for general use as well. 
+Liquid was created in 2006 as a Ruby template language for the ecommerce site [Shopify](https://docs.shopify.com/themes/liquid-documentation/basics "Shopify themes"). It remains an integral part of Shopify, but has been spun off for general use as well. 
 
 Liquid uses a combination of **tags**, **objects**, and **filters** to load and format content. Within tags, logic can be applied to loop through objects, create variables, and apply conditional statements to control the building of content.
 
@@ -15,20 +16,22 @@ There are two basic types of markup in Liquid, **output** and **tags**. Output w
 
 Output writes content to the page. Output tags start with two curly braces, contain the content to be written to the page, and then end with two curly braces. Here’s an example:
 
+{% highlight liquid %}
+Written by {{"{{author"}}}}
+Written by {{"{{page.author"}}}}
+Written by {{"{{'james'"}}}}
+{% endhighlight %}
 
-Written by {{author}}
-Written by {{page.author}}
-Written by {{'james'}}
+In this instance the value of `author` would be evaluated and written to the page, the `page` object would be parsed to find the value of the `author` property and that would be written to the page, and then the literal string “james” would be written to the page.
 
-
-In this instance the value of author would be evaluated and written to the page, the page object would be parsed to find the value of the author property and that would be written to the page, and then the literal string “james” would be written to the page.
-
-Output markup can be further modified through the use of filters. Filters are methods that can be used to transform the results of the output tags. Filters appear to the right of the output parameter, and are separated using the ‘pipe’ character ( | ).
+Output markup can be further modified through the use of filters. Filters are methods that can be used to transform the results of the output tags. Filters appear to the right of the output parameter, and are separated using the ‘pipe’ character `( | )`.
 
 Here’s a filter in action:
 
-{{ site.time | date_to_string}}
+{% highlight liquid %}
+{{"{{ site.time | date_to_string"}}}}
 <!-- would output ‘22 Aug 2015’ -->
+{% endhighlight %}
 
 It’s also possible to use more than one filter at a time. Here are a few of the standard filters available in Liquid:
 
